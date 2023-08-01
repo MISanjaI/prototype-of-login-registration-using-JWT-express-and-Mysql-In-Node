@@ -20,7 +20,9 @@ This is a simple Node.js application that uses JSON Web Tokens (JWT) for authent
 
 ## NOTE:
 
- choose no auth for the token validation instead of bearer token or jwt token in Authorization and enter the header "authorization" in the key field and enter the jwt token which  you want to enter to be in the value field -(if you want to test it in the Postman)
+ => choose no auth for the token validation instead of bearer token or jwt token in Authorization and enter the header "authorization" in the key field and enter the jwt token which  you want to enter to be in the value field -(if you want to test it in the Postman)
+
+=> If you have problem in hashing the password , try putting your password inside the double or single quotes (in string format),I mean in your client side program or client side testing tool . It may have the possibility to solve the problem ✌️.But remember what kind of problem you are facing.
 
 ## Dependencies
 
