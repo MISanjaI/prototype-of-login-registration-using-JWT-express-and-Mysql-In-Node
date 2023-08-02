@@ -7,6 +7,6 @@ CREATE TABLE `users` (
   `password` varchar(255) NULL
 )
 
-select * from users;
+
 
 
