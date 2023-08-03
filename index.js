@@ -94,6 +94,29 @@ app.get("/CheckAuth", verifyJWT, (req, res) => {
   });
 });
 
+app.post('/ForgotPassword', (req,res) =>{
+  const sql1 = 'SELECT * FROM users WHERE `email` = ? ';
+  db.query(sql1,req.body.email,(err,data)=>{
+      if(err){
+          return res.json("the entered email is invalid")
+      }
+      if(data.length > 0){
+          const id = data[0].id;
+          const sql2 = 'UPDATE users SET `password`= ? WHERE `email` =? ';
+          const password = hashSync(req.body.password,10);
+          db.query(sql2,[password,req.body.email],(err,data) =>{
+              if(err){
+                  return res.json("error")
+              }
+              res.json({
+                  message:'your password has been updated'
+              })
+          }
+              )
+      }
+  })
+})
+
 const port = 3308;
 app.listen(port, () => {
   console.log("server is running on " + port);
