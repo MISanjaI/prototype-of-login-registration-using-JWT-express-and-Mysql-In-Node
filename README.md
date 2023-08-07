@@ -1,4 +1,4 @@
-# login-registration-using-JWT-express-and-Mysql-In-Node
+# prototype of login-registration-using-JWT-express-and-Mysql-In-Node for educational purpose 
 
 
 # JWT Authentication
