@@ -22,28 +22,28 @@ This is a simple Node.js application that uses JSON Web Tokens (JWT) for authent
    
 ## Endpoints
 
-POST /register
+POST /register : 
 This endpoint allows users to register by providing their email and password. The password is securely hashed before storing it in the database.
 
-POST /login
+POST /login  :
 Users can log in using their registered email and password. Upon successful login, a JWT token is generated and sent back to the client for authentication.
 
-GET /CheckAuth
+GET /CheckAuth  :
 This endpoint requires a valid JWT token in the request headers. If the token is valid, it returns the list of users from the database as an authenticated response.
 
-POST /emailverification
+POST /emailverification  :
 This endpoint checks if the provided email exists in the database. If the email is found, it sets the email in the session for future reference.
 
-POST /checkOldPassword
+POST /checkOldPassword  :
 This endpoint requires an email and a password in the request body. It verifies the password against the stored hashed password in the database. If the password matches, it generates an OTP, updates it in the database, and stores it in the session for further verification.
 
-POST /verifyOtp
+POST /verifyOtp  :
 This endpoint verifies the provided OTP against the OTP stored in the database and associated with the email in the session. If the OTP is valid, it sends a success message; otherwise, it returns an error message.
 
-POST /CreateNewPassword
+POST /CreateNewPassword  :
 This endpoint allows users to reset their password using an OTP verification mechanism. It requires an email and a new password in the request body. If the email is found in the session and the new password is unique, the password is updated in the database.
 
-Cron Job for OTP Cleanup
+Cron Job for OTP Cleanup  :
 The application includes a cron job that runs every 10 minutes to delete expired OTPs (older than 30 minutes) from the database. This helps keep the OTP database clean and improves security.
 
 ## Usage
