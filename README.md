@@ -5,7 +5,7 @@ This code will not work as you please for the actual implementation of real-time
 
 # - JWT Authentication -
 
-This is a simple Node.js application that uses JSON Web Tokens (JWT) for authentication. It allows users to register and login, and provides a route to check if the user is authenticated.
+This is a simple Node.js application that uses JSON Web Tokens (JWT) for authentication. It allows users to register and login, and provides a route to check if the user is authenticated.Also allows the user to change their password .
 
 ## Installation
 
